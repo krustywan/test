@@ -1,0 +1,10 @@
+<h1>Character gallery</h1>
+<table>
+<% @characters.each do |character| %>
+      <tr>
+        <td><%= character.name %></td>
+        <td><%= character.description %></td>
+        <td><%= image_tag(character.picture_url, :width => 600) if character.picture.present? %></td>
+      </tr>
+    <% end %>
+</table>
